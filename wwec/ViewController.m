@@ -8,22 +8,33 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<UIWebViewDelegate>{
+    
+}
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self hbo_loadGame];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+-(void)hbo_loadGame{
+    NSString *pathStr = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"web"];
+    NSString *_pathStr = [NSString stringWithFormat:@"%@/index.html",pathStr];
+    NSURL *url = [NSURL fileURLWithPath:_pathStr];
+    UIWebView *webview = [[UIWebView alloc]initWithFrame:self.view.frame];
+    webview.backgroundColor = [UIColor blackColor];
+    webview.scrollView.scrollEnabled = NO;
+    webview.delegate = self;
+    [webview loadRequest:[NSURLRequest requestWithURL:url]];
+    [self.view addSubview:webview];
+}
 
 @end

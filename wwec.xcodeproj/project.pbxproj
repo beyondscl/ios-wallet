@@ -14,6 +14,7 @@
 		E334E0E02123C7E7000EB8F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E334E0DF2123C7E7000EB8F5 /* Assets.xcassets */; };
 		E334E0E32123C7E7000EB8F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E334E0E12123C7E7000EB8F5 /* LaunchScreen.storyboard */; };
 		E334E0E62123C7E7000EB8F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E334E0E52123C7E7000EB8F5 /* main.m */; };
+		E334E0EF2123CBB7000EB8F5 /* web in Resources */ = {isa = PBXBuildFile; fileRef = E334E0EE2123CBB7000EB8F5 /* web */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E334E0E22123C7E7000EB8F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E334E0E42123C7E7000EB8F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E334E0E52123C7E7000EB8F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E334E0EE2123CBB7000EB8F5 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; name = web; path = ../../../web; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		E334E0C72123C7E0000EB8F5 = {
 			isa = PBXGroup;
 			children = (
+				E334E0EE2123CBB7000EB8F5 /* web */,
 				E334E0D22123C7E0000EB8F5 /* wwec */,
 				E334E0D12123C7E0000EB8F5 /* Products */,
 			);
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E334E0E32123C7E7000EB8F5 /* LaunchScreen.storyboard in Resources */,
+				E334E0EF2123CBB7000EB8F5 /* web in Resources */,
 				E334E0E02123C7E7000EB8F5 /* Assets.xcassets in Resources */,
 				E334E0DB2123C7E0000EB8F5 /* Main.storyboard in Resources */,
 			);
@@ -287,9 +291,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3L79AZ68B4;
 				INFOPLIST_FILE = wwec/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,9 +310,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3L79AZ68B4;
 				INFOPLIST_FILE = wwec/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

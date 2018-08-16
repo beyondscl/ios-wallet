@@ -85,7 +85,7 @@
                 NSString *cmd = [param[0] componentsSeparatedByString:@"="][1];
                 if(2==cmd.intValue){ //相机
                     SWQRCodeConfig *config = [[SWQRCodeConfig alloc]init];
-                    config.scannerType = SWScannerTypeBoth;
+                    config.scannerType = SWScannerTypeQRCode;
                     SWQRCodeViewController *qrcodeVC = [[SWQRCodeViewController alloc]init];
                     qrcodeVC.codeConfig = config;
                     [qrcodeVC setCameraDele:self];

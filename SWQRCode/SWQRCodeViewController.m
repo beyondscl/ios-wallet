@@ -69,9 +69,9 @@
 - (void)_setupUI {
     
     self.view.backgroundColor = [UIColor blackColor];
-    UIBarButtonItem *albumItem = [[UIBarButtonItem alloc]initWithTitle:@"相册" style:UIBarButtonItemStylePlain target:self action:@selector(showAlbum)];
-    [albumItem setTintColor:[UIColor blackColor]];
-    self.navigationItem.rightBarButtonItem = albumItem;
+//    UIBarButtonItem *albumItem = [[UIBarButtonItem alloc]initWithTitle:@"相册" style:UIBarButtonItemStylePlain target:self action:@selector(showAlbum)];
+//    [albumItem setTintColor:[UIColor blackColor]];
+//    self.navigationItem.rightBarButtonItem = albumItem;
     
     [self.view addSubview:self.scannerView];
     

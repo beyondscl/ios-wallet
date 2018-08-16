@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol cameraDelegate <NSObject>
+-(void)cameraData:(NSString*)data;
+@end
+
 @interface ViewController : UIViewController
 
 

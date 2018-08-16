@@ -15,6 +15,12 @@
 		E334E0E32123C7E7000EB8F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E334E0E12123C7E7000EB8F5 /* LaunchScreen.storyboard */; };
 		E334E0E62123C7E7000EB8F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E334E0E52123C7E7000EB8F5 /* main.m */; };
 		E334E0EF2123CBB7000EB8F5 /* web in Resources */ = {isa = PBXBuildFile; fileRef = E334E0EE2123CBB7000EB8F5 /* web */; };
+		E3380DD221257AD900725C28 /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E3380DC921257AD900725C28 /* SWQRCodeConfig.m */; };
+		E3380DD321257AD900725C28 /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E3380DCB21257AD900725C28 /* SWQRCodeManager.m */; };
+		E3380DD421257AD900725C28 /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E3380DCC21257AD900725C28 /* SWQRCode.bundle */; };
+		E3380DD521257AD900725C28 /* SWQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3380DCE21257AD900725C28 /* SWQRCodeViewController.m */; };
+		E3380DD621257AD900725C28 /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3380DD121257AD900725C28 /* SWScannerView.m */; };
+		E344EDCA2125103F00672F9A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E344EDC92125103F00672F9A /* Photos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,18 @@
 		E334E0E42123C7E7000EB8F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E334E0E52123C7E7000EB8F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E334E0EE2123CBB7000EB8F5 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; name = web; path = ../../../web; sourceTree = "<group>"; };
+		E3380DC721257AD900725C28 /* SWQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCode.h; sourceTree = "<group>"; };
+		E3380DC821257AD900725C28 /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
+		E3380DC921257AD900725C28 /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
+		E3380DCA21257AD900725C28 /* SWQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeManager.h; sourceTree = "<group>"; };
+		E3380DCB21257AD900725C28 /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
+		E3380DCC21257AD900725C28 /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
+		E3380DCD21257AD900725C28 /* SWQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeViewController.h; sourceTree = "<group>"; };
+		E3380DCE21257AD900725C28 /* SWQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeViewController.m; sourceTree = "<group>"; };
+		E3380DD021257AD900725C28 /* SWScannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScannerView.h; sourceTree = "<group>"; };
+		E3380DD121257AD900725C28 /* SWScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScannerView.m; sourceTree = "<group>"; };
+		E344EDC721250F8600672F9A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E344EDC92125103F00672F9A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E344EDCA2125103F00672F9A /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,9 +65,12 @@
 		E334E0C72123C7E0000EB8F5 = {
 			isa = PBXGroup;
 			children = (
+				E3380DC521257AD900725C28 /* SWQRCode */,
+				E3380DB821252D0300725C28 /* img */,
 				E334E0EE2123CBB7000EB8F5 /* web */,
 				E334E0D22123C7E0000EB8F5 /* wwec */,
 				E334E0D12123C7E0000EB8F5 /* Products */,
+				E344EDC621250F8500672F9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +97,56 @@
 				E334E0DC2123C7E0000EB8F5 /* wwec.xcdatamodeld */,
 			);
 			path = wwec;
+			sourceTree = "<group>";
+		};
+		E3380DB821252D0300725C28 /* img */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = img;
+			path = ../../../img;
+			sourceTree = "<group>";
+		};
+		E3380DC521257AD900725C28 /* SWQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				E3380DC621257AD900725C28 /* Config */,
+				E3380DCC21257AD900725C28 /* SWQRCode.bundle */,
+				E3380DCD21257AD900725C28 /* SWQRCodeViewController.h */,
+				E3380DCE21257AD900725C28 /* SWQRCodeViewController.m */,
+				E3380DCF21257AD900725C28 /* View */,
+			);
+			path = SWQRCode;
+			sourceTree = "<group>";
+		};
+		E3380DC621257AD900725C28 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E3380DC721257AD900725C28 /* SWQRCode.h */,
+				E3380DC821257AD900725C28 /* SWQRCodeConfig.h */,
+				E3380DC921257AD900725C28 /* SWQRCodeConfig.m */,
+				E3380DCA21257AD900725C28 /* SWQRCodeManager.h */,
+				E3380DCB21257AD900725C28 /* SWQRCodeManager.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E3380DCF21257AD900725C28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3380DD021257AD900725C28 /* SWScannerView.h */,
+				E3380DD121257AD900725C28 /* SWScannerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E344EDC621250F8500672F9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E344EDC92125103F00672F9A /* Photos.framework */,
+				E344EDC721250F8600672F9A /* CoreTelephony.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3380DD421257AD900725C28 /* SWQRCode.bundle in Resources */,
 				E334E0E32123C7E7000EB8F5 /* LaunchScreen.storyboard in Resources */,
 				E334E0EF2123CBB7000EB8F5 /* web in Resources */,
 				E334E0E02123C7E7000EB8F5 /* Assets.xcassets in Resources */,
@@ -151,7 +224,11 @@
 				E334E0D82123C7E0000EB8F5 /* ViewController.m in Sources */,
 				E334E0DE2123C7E0000EB8F5 /* wwec.xcdatamodeld in Sources */,
 				E334E0E62123C7E7000EB8F5 /* main.m in Sources */,
+				E3380DD221257AD900725C28 /* SWQRCodeConfig.m in Sources */,
+				E3380DD621257AD900725C28 /* SWScannerView.m in Sources */,
+				E3380DD321257AD900725C28 /* SWQRCodeManager.m in Sources */,
 				E334E0D52123C7E0000EB8F5 /* AppDelegate.m in Sources */,
+				E3380DD521257AD900725C28 /* SWQRCodeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

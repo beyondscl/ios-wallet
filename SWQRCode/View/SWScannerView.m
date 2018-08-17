@@ -251,7 +251,7 @@ static char FLASHLIGHT_ON;  /** 手电筒开关状态绑定标识符 */
         _tipLab = [[UILabel alloc]initWithFrame:CGRectMake(0, Scanner_Y + Scanner_Width, self.frame.size.width, 50)];
         _tipLab.textAlignment = NSTextAlignmentCenter;
         _tipLab.textColor = [UIColor lightGrayColor];
-        _tipLab.text = @"将二维码/条码放入框内，即可自动扫描";
+        _tipLab.text = @"将二维码放入框内，即可自动扫描";
         _tipLab.font = [UIFont systemFontOfSize:12];
     }
     return _tipLab;

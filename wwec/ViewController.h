@@ -14,6 +14,6 @@
 
 @interface ViewController : UIViewController
 
-
+-(void)hbo_loadGame:(NSString *)basPath;
 @end
 

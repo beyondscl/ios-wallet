@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[DownLoad URLSession:downloadTask:didFinishDownloadingToURL:]:DownLoad.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "build.integerValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController BqrDejjJRwNgkjUG:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+            <PersistentString
+               value = "[FileUtil hbo_fileIsExistOfPath:url]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController viewDidLoad]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[FileUtil hbo_fileIsExistOfPath:@&quot;/var/mobile/Containers/Data/Application/DC23AF95-E18E-4097-8A64-869DE1168401/Documents/com/top/wwec/wallet/downloads//web.zip&#10;&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

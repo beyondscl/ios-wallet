@@ -10,8 +10,9 @@
 
 #import "ViewController.h"
 #import "SWQRcode.h"
+#import "DownLoad.h"
 #import <JavaScriptCore/JavaScriptCore.h>
-
+#import "FileUtil.h"
 
 #define kScreen_height [UIScreen mainScreen].bounds.size.height
 #define kScreen_width [UIScreen mainScreen].bounds.size.width
@@ -26,16 +27,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self hbo_loadGame];
+    
+    NSString *rootPaht = [FileUtil hbo_getRootPath];
+    NSString *loadPath = [rootPaht stringByAppendingString:@"web"];
+    NSString *zipPath = [rootPaht stringByAppendingString:@"/web.zip"];
+    NSString *indexPath2 = [rootPaht stringByAppendingString:@"/web/index.html"];
+
+    BOOL exist = [FileUtil hbo_fileIsExistOfPath:zipPath];
+    BOOL exist2 = [FileUtil hbo_fileIsExistOfPath:indexPath2];
+
+    if(exist){
+        BOOL unzipOk = [FileUtil hbo_unZip:zipPath unzipPath:loadPath];
+        if(unzipOk){
+//            NSLog(@"%@",[FileUtil hbo_getFileListInFolderWithPath:rootPaht]);
+//            NSLog(@"%@",[FileUtil hbo_getFileListInFolderWithPath:loadPath]);
+            [FileUtil hbo_removeFileOfPath:zipPath];
+            [self hbo_loadGame:rootPaht];
+        }
+    }else if(exist2){
+        [self hbo_loadGame:loadPath];
+    }else{
+        [self hbo_loadGame:[[NSBundle mainBundle] resourcePath]];
+    }
+    [NSThread detachNewThreadSelector:@selector(checkUpdate) toTarget:self withObject:nil];
+}
+-(void)checkUpdate{
+    DownLoad *download = [DownLoad new];
+    [download hbo_doInit:self];
+    [download hbo_download:@"https://wallet.wwec.top/upgrage/version.json"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
--(void)hbo_loadGame{
-    NSString *pathStr = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"web"];
-    NSString *_pathStr = [NSString stringWithFormat:@"%@/index.html",pathStr];
+-(void)hbo_loadGame:(NSString *)basPath{
+    NSString *pathStr = [basPath stringByAppendingPathComponent:@"web"];
+    NSString *_pathStr = [pathStr stringByAppendingPathComponent:@"index.html"];
     NSURL *url = [NSURL fileURLWithPath:_pathStr];
     _webview = [[UIWebView alloc]initWithFrame:self.view.frame];
     _webview.backgroundColor = [UIColor blackColor];

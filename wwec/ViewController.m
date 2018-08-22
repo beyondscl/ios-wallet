@@ -45,7 +45,7 @@
             [self hbo_loadGame:rootPaht];
         }
     }else if(exist2){
-        [self hbo_loadGame:loadPath];
+        [self hbo_loadGame:rootPaht];
     }else{
         [self hbo_loadGame:[[NSBundle mainBundle] resourcePath]];
     }

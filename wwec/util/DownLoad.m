@@ -55,16 +55,16 @@
         if([FileUtil hbo_fileIsExistOfPath:version_path]){
             NSData *data=[NSData dataWithContentsOfFile:version_path];
             NSMutableDictionary *dictFromData = [NSJSONSerialization JSONObjectWithData:data
-                                                                         options:NSJSONReadingAllowFragments
-                                                                           error:nil];
+                                                                                options:NSJSONReadingAllowFragments
+                                                                                  error:nil];
             NSString *version = [dictFromData objectForKey:@"version"];
             NSString *upgrade_app = [dictFromData objectForKey:@"upgrade_app"];
             NSString *build = [dictFromData objectForKey:@"build"];
             //临时文件
             NSData *jdata = [[NSData alloc] initWithContentsOfFile:location];
             NSMutableDictionary *new_v = [NSJSONSerialization JSONObjectWithData:jdata
-                                                                    options:NSJSONReadingAllowFragments
-                                                                      error:nil];
+                                                                         options:NSJSONReadingAllowFragments
+                                                                           error:nil];
             NSString *new_build = [new_v objectForKey:@"build"];
             NSString *new_version = [new_v objectForKey:@"version"];
             //更新或提示

@@ -609,7 +609,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.top.wwec.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1e262817-49ee-45d4-bed7-986695ab069b";
+				PROVISIONING_PROFILE = "481f7da5-aa1f-409e-b15e-bbaf2d6f9552";
 				PROVISIONING_PROFILE_SPECIFIER = "wanWeiWallet-Developer";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

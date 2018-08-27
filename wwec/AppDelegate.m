@@ -13,6 +13,8 @@
 #import <BuglyHotfix/BuglyMender.h>
 #import "JPEngine.h"
 
+ #import <AVFoundation/AVFoundation.h>
+
 @interface AppDelegate ()<BuglyDelegate>
 
 @end
@@ -21,6 +23,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //不影响后台声音
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
+    
     // Override point for customization after application launch.
     // 启动图片延时: 1秒
     [NSThread sleepForTimeInterval:1];

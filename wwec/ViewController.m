@@ -55,6 +55,8 @@
     DownLoad *download = [DownLoad new];
     [download hbo_doInit:self];
     [download hbo_download:@"https://wallet.wwec.top/upgrage/version.json"];
+//    [download hbo_download:@"http://120.79.236.139/upgrage/version.json"];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -140,9 +142,9 @@
 }
 
 // 唤出键盘内容不移动
-- (UIView*)viewForZoomingInScrollView:(UIScrollView*)scrollView{
-    return nil;
-}
+//- (UIView*)viewForZoomingInScrollView:(UIScrollView*)scrollView{
+//    return nil;
+//}
 
 // 背景黑色，状态栏文字白色适配所有机型
 - (UIStatusBarStyle)preferredStatusBarStyle{

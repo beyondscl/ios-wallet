@@ -83,6 +83,7 @@
 }
 -(void)checkUpdate{
     [self hbo_download:@"https://wallet.wwec.top/upgrage/web.zip"];
+    //test url 
 }
 //恢复下载代理
 -(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes{

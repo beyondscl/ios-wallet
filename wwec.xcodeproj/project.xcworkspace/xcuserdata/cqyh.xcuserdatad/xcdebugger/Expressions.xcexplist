@@ -21,13 +21,5 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
-      <ContextState
-         contextName = "-[ViewController viewDidLoad]:ViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[FileUtil hbo_fileIsExistOfPath:@&quot;/var/mobile/Containers/Data/Application/DC23AF95-E18E-4097-8A64-869DE1168401/Documents/com/top/wwec/wallet/downloads//web.zip&#10;&quot;]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
    </ContextStates>
 </VariablesViewState>
